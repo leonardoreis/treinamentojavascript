@@ -10,13 +10,12 @@
 
     <form>
         <input id="entrada" 
-        //onchange="uppercase_input()" 
-        //onkeyup="uppercase_input()" 
-        //onkeypress="uppercase_input()"
-        //onblur="uppercase_input()"
+        onkeyup="uppercase_input()"
         onkeydown="uppercase_input()" />
         
     </form>
+
+    <p id="texto"></p>
 
 <script type="text/javascript">
     function uppercase_input(){
@@ -24,6 +23,8 @@
         entrada = String(entrada);
         entrada = entrada.toUpperCase();
         document.getElementById("entrada").value = entrada;
+        document.getElementById("texto").innerHTML = String(entrada);
+
     }
 </script>
 </body>
